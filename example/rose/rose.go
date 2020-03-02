@@ -60,7 +60,7 @@ func main() {
 		filter.Apply(&ctx, y, u)
 
 		// get corrected state vector
-		state := filter.State()
+		state := filter.CurrentState()
 
 		// print out input and output signals
 		fmt.Fprintf(file, "%3.8f,%3.8f\n", y.AtVec(0), state.AtVec(0))
