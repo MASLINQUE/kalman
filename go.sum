@@ -1,5 +1,4 @@
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
-github.com/konimarti/kalman v0.0.2/go.mod h1:1nxeJWXBW2saAanBArsBiVUtv7D4U/VRYHmpAHYxBzo=
 github.com/konimarti/lti v0.0.1 h1:x5FZyuNqqPHnSLJCmiJNzDMwpLh/lzSLKmlv4uAwef0=
 github.com/konimarti/lti v0.0.1/go.mod h1:iWSWruZI5siiYGi6p+D0uj8fYxMlzjFreJwoRNwPV0A=
 github.com/remyoudompheng/bigfft v0.0.0-20170806203942-52369c62f446/go.mod h1:uYEyJGbgTkfkS4+E/PavXkNJcbFIpEtjt2B0KDQ5+9M=
