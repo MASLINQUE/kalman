@@ -1,5 +1,4 @@
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
-github.com/konimarti/kalman v0.0.2 h1:PeWNtkzz66eJDmzIuW7kmcfBG6aOODC1GcPNS32iz2k=
 github.com/konimarti/kalman v0.0.2/go.mod h1:1nxeJWXBW2saAanBArsBiVUtv7D4U/VRYHmpAHYxBzo=
 github.com/konimarti/lti v0.0.1 h1:x5FZyuNqqPHnSLJCmiJNzDMwpLh/lzSLKmlv4uAwef0=
 github.com/konimarti/lti v0.0.1/go.mod h1:iWSWruZI5siiYGi6p+D0uj8fYxMlzjFreJwoRNwPV0A=
@@ -12,7 +11,6 @@ golang.org/x/exp v0.0.0-20190306152737-a1d7652674e8/go.mod h1:CJ0aWSM057203Lf6IL
 golang.org/x/exp v0.0.0-20190312203227-4b39c73a6495/go.mod h1:ZjyILWgesfNpC6sMxTJOJm9Kp84zZh5NQWvqDGG3Qr8=
 golang.org/x/exp v0.0.0-20190627132806-fd42eb6b336f/go.mod h1:ZjyILWgesfNpC6sMxTJOJm9Kp84zZh5NQWvqDGG3Qr8=
 golang.org/x/image v0.0.0-20190227222117-0694c2d4d067/go.mod h1:kZ7UVZpmo3dzQBMxlp+ypCbDeSB+sBbTgSJuh5dn5js=
-golang.org/x/image v0.0.0-20190622003408-7e034cad6442/go.mod h1:FeLwcggjj3mMvU+oOTbSwawSJRM1uh48EjtB4UJZlP0=
 golang.org/x/image v0.0.0-20190703141733-d6a02ce849c9/go.mod h1:FeLwcggjj3mMvU+oOTbSwawSJRM1uh48EjtB4UJZlP0=
 golang.org/x/mobile v0.0.0-20190312151609-d3739f865fa6/go.mod h1:z+o9i4GpDbdi3rU15maQ/Ox0txvL9dWGYEHz965HBQE=
 golang.org/x/mobile v0.0.0-20190607214518-6fa95d984e88/go.mod h1:E/iHnbuqvinMTCcRqshq8CkpyQDoeVncDDYHnLhea+o=
@@ -30,7 +28,6 @@ golang.org/x/text v0.3.2/go.mod h1:bEr9sfX3Q8Zfm5fL9x+3itogRgK3+ptLWKqgva+5dAk=
 golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 golang.org/x/tools v0.0.0-20190206041539-40960b6deb8e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 golang.org/x/tools v0.0.0-20190312151545-0bb0c0a6e846/go.mod h1:LCzVGOaR6xXOjkQ3onu1FJEFr0SW1gC7cKk1uF8kGRs=
-golang.org/x/tools v0.0.0-20190702201734-44aeb8b7c377/go.mod h1:jcCCGcm9btYwXyDqrUWc6MKQKKGJCWEQ3AfLSRIbEuI=
 golang.org/x/tools v0.0.0-20190703183924-abb7e64e8926/go.mod h1:jcCCGcm9btYwXyDqrUWc6MKQKKGJCWEQ3AfLSRIbEuI=
 gonum.org/v1/gonum v0.0.0-20190331200053-3d26580ed485/go.mod h1:2ltnJ7xHfj0zHS40VVPYEAAMTa3ZGguvHGBSJeRWqE0=
 gonum.org/v1/gonum v0.0.0-20190628223043-536a303fd62f h1:6zTkF8Jk1LmfPAi8Sx8pUDJKysk0I5e56GOrPml7rAw=

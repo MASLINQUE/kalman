@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"os"
 
-	"github.com/konimarti/kalman"
+	"github.com/flaviostutz/kalman"
 	"github.com/konimarti/lti"
 	"gonum.org/v1/gonum/mat"
 )
