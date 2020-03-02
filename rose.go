@@ -21,10 +21,17 @@ func (r *roseImpl) Apply(ctx *Context, z, ctrl *mat.VecDense) mat.Vector {
 }
 
 //State return the current state of the context
-func (r *roseImpl) State() mat.Vector {
+func (r *roseImpl) CurrentState() mat.Vector {
 	var state mat.VecDense
 	state.CloneVec(r.Std.savedState)
 	return &state
+}
+
+//PredictState
+func (f *roseImpl) PredictState(ctx *Context, ctrl *mat.VecDense) *mat.VecDense {
+	// X_k = Ad * X_k-1 + Bd * ctrl
+	f.Std.PredictState(ctx, ctrl)
+	return ctx.X
 }
 
 type rose struct {

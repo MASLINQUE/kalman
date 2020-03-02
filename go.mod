@@ -1,8 +1,9 @@
-module github.com/konimarti/kalman
+module github.com/flaviostutz/kalman
 
 go 1.12
 
 require (
+	github.com/konimarti/kalman v0.0.2
 	github.com/konimarti/lti v0.0.1
 	github.com/remyoudompheng/bigfft v0.0.0-20190512091148-babf20351dd7 // indirect
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4 // indirect

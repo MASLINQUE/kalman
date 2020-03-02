@@ -73,7 +73,7 @@ func TestPredictionState(t *testing.T) {
 
 	// predict next state
 	ctrl := mat.NewVecDense(1, nil)
-	filter.NextState(ctx, ctrl)
+	filter.PredictState(ctx, ctrl)
 
 	expectedVec := mat.NewVecDense(4, []float64{
 		976.32498, 0.0092222, 0.092222, 0,
@@ -90,7 +90,7 @@ func TestPredictionCovariance(t *testing.T) {
 	filter := newImplementedFilter()
 
 	// predict next covariance
-	filter.NextCovariance(ctx)
+	filter.PredictCovariance(ctx)
 
 	// predict next covariance
 	expected := mat.NewDense(4, 4, []float64{

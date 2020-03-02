@@ -35,7 +35,8 @@ func NewZeroNoise(q, r int) Noise {
 //Filter interface for using the Kalman filter
 type Filter interface {
 	Apply(ctx *Context, z, ctrl *mat.VecDense) mat.Vector
-	State() mat.Vector
+	CurrentState() mat.Vector
+	PredictState(ctx *Context, ctrl *mat.VecDense) *mat.VecDense
 }
 
 //filtImpl is the implementation of the filter interface
@@ -65,28 +66,28 @@ func (f *filterImpl) Apply(ctx *Context, z, ctrl *mat.VecDense) mat.Vector {
 	f.savedState = mat.VecDenseCopyOf(ctx.X)
 
 	// predict new state
-	f.NextState(ctx, ctrl)
+	f.PredictState(ctx, ctrl)
 
 	// predict new covariance matrix
-	f.NextCovariance(ctx)
+	f.PredictCovariance(ctx)
 
 	return filtered
 }
 
-//NextState
-func (f *filterImpl) NextState(ctx *Context, ctrl *mat.VecDense) error {
+//PredictState
+func (f *filterImpl) PredictState(ctx *Context, ctrl *mat.VecDense) *mat.VecDense {
 	// X_k = Ad * X_k-1 + Bd * ctrl
 	ctx.X = f.Lti.Predict(ctx.X, ctrl)
-	return nil
+	return ctx.X
 }
 
 //NextCovariance
-func (f *filterImpl) NextCovariance(ctx *Context) error {
+func (f *filterImpl) PredictCovariance(ctx *Context) *mat.Dense {
 	// P_new = Ad * P * Ad^t + Q
 	//ctx.P.Product(f.Lti.Ad, ctx.P, f.Lti.Ad.T())
 	//ctx.P.Add(ctx.P, f.Nse.Q)
 	ctx.P = lti.NewCovariance(f.Lti.Ad).Predict(ctx.P, f.Nse.Q)
-	return nil
+	return ctx.P
 }
 
 //Update performs Kalman update
@@ -132,7 +133,7 @@ func (f *filterImpl) Update(ctx *Context, z, ctrl mat.Vector) error {
 }
 
 //State return the current state of the context
-func (f *filterImpl) State() mat.Vector {
+func (f *filterImpl) CurrentState() mat.Vector {
 	var state mat.VecDense
 	state.CloneVec(f.savedState)
 	return &state
