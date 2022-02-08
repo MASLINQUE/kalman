@@ -1,4 +1,4 @@
-module github.com/flaviostutz/kalman
+module github.com/MASLINQUE/kalman
 
 go 1.12
 
